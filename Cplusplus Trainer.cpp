@@ -1,14 +1,15 @@
 
-// vreau sa pun o optiune cu chestii de baza pt c++
+//mai este de pus punctul 9 si testul 3.
 	
 // v 2.0
+// termenele si conditiile sa nu mai apara tot timpul cand pornesti programul, doar la prima pornire (save.acr)
 // sistemul de teste sa aiba salvat prin intermediul unui fisier "test.acr" modul in care testele vor fi afisate.
 // cel mia probabil  sa existe optiune de toate, doar cele ramase, custom, niciunul.
 #include<iostream.h>
 #include<string.h>
 #include<windows.h>
 int optiune;
-bool btest=true, bcopywright=false, bmeniu=false, bintrebare = true, btermsandconditions=false;
+bool btest=true, bcopywright=false, bmeniu=false, bintrebare = true, btermsandconditions=false, bskip=false;
 
 int termsandconditions()
 {
@@ -18,10 +19,12 @@ int termsandconditions()
 	cout<<" Cplusplus Trainer will use its capacity of reading/writing only in save.acr file!"<<endl;
 	cout<<" By continuing with the Cplusplus Trainer, you accept and agree to be bound by the terms and provision of the ToS."<<endl;
 	cout<<" Do you agree?(1=YES/2=NO)";cin>>f;
+	btermsandconditions=true;
 	if(f==2)
 	{
 		cout<<"You didn't acceped the Terms and Conditions and the application will now exit!";
-		return 0;
+		optiune=0;
+		bskip=true;
 	}
 	btermsandconditions=true;
 }
@@ -33,10 +36,13 @@ void copywright()
 	cout<<"* *  Copywight (C) 2011 Alex Mihai @ C.N.I.H  * *"<<endl;
 	cout<<"* * * * * * * * * * * * * * * * * * * * * * * * *"<<endl;
 	cout<<"* * * * * * * * * * * * * * * * * * * * * * * * *"<<endl;
+	cout<<endl;
+	cout<<endl;
+	cout<<endl;
 }
 void meniu_lung()
 {
-	cout<<"Hello and welcome! Daca esti aici inseamna ca nu intelegi nimic de la profa asta si vine un test."<<endl;
+	cout<<"Hello and welcome to Cplusplus Trainer v0.9!"<<endl;
 	cout<<"Tot ce trebuie sa faci aici e sa alegi despre ce vrei sa inveti. Alege un numar de la 1 la 8 si apasa enter."<<endl;
 	cout<<"1. Librarii"<<endl;
 	cout<<"2. Tipuri de subprograme"<<endl;
@@ -47,6 +53,7 @@ void meniu_lung()
 	cout<<"7. Ordonari"<<endl;
 	cout<<"8. Numere absolute"<<endl;
 	cout<<"9. De retinut!"<<endl;
+	cout<<"0. EXIT"<<endl;
 	cout<<"Make your choice: ";cin>>optiune;
 }
 void meniu_scurt()
@@ -68,6 +75,7 @@ void meniu_scurt()
 }
 void librarii()
 {
+	int e;
 	cout<<"Librarii"<<endl;
 	cout<<endl;
 	cout<<"Imagineaza-ti ca o librarie este ca un dictionar. Asa cum dictionarul este o colectie de cuvinte, asa o librarie este o colectie de comenzi(reprezentate de cuvinte evident...deci poti spune ca este un dictionar). Daca ea nu este inclusa in program, el nu va sti ca acele comenzi exista."<<endl;
@@ -81,6 +89,7 @@ void librarii()
 	cout<<"Libraria <math.h> este folosita daca in program exista comenzi de genul sqrt sau pow."<<endl;
 	cout<<endl;
 	cout<<"Ele se apeleaza in program prin sintaxa #include <librarie>, de exemplu: #include <iostream.h> sau #include <math.h>"<<endl;
+	cout<<"Ready? Scrie 1 si apasa ENTER cand esti gata.";cin>>e;
 }
 int test1()
 {
@@ -106,13 +115,13 @@ int test1()
 		cout<<"Corect!"<<endl;
 	else
 	{
-		cout<<"Gresit!";
+		cout<<"Gresit!"<<endl;
 		return test1();
 	}
 }
 int tipuri_subprograme()
 {	
-	int a=0;
+	int a=0,e;
 	cout<<"Tipurile Subprogramelor"<<endl<<endl;
 	cout<<"Orice program este format din subprograme, fie si el doar unul (main). O sa termin repede cu ele...astea sunt de mai multe tipuri:"<<endl<<endl;
 	cout<<"1. VOID - un subprogram foloseste void daca in interiorul lui se folosesc numai operatii de citire/scriere (de tipul cin,cout, a=b);"<<endl;
@@ -128,6 +137,7 @@ int tipuri_subprograme()
 }
 void programe()
 {
+	int e;
 	cout<<"Bun...la partea asta o sa fiu rapid...idea e ca orice program trebuie sa arate sub forma asta"<<endl<<endl;
 	cout<<"#include <iostream.h>"<<endl;
 	cout<<"int main()"<<endl;
@@ -137,6 +147,7 @@ void programe()
 	cout<<"}"<<endl;
 	cout<<endl;
 	cout<<"Asta este forma unui program...tine-l asa si din cauza asta nu vei avea erori!"<<endl;
+	cout<<"Ready? Scrie 1 si apasa ENTER cand esti gata.";cin>>e;
 }
 int test2()
 {
@@ -171,12 +182,13 @@ int test2()
 		cout<<"Corect!"<<endl;
 	else
 	{
-		cout<<"Gresit!";
+		cout<<"Gresit!"<<endl;
 		return test2();
 	}
 }
 int subprograme()
 {
+	int e;
 	cout<<" Subprogramele sunt niste chestii...care...hm...pai imagineaza-ti ca spui o pveste...si in loc sa insiri povestea cap coada, prezinti mai intai personajele si dupa povestesti."<<endl;
 	cout<<" De exemplu: Ieri am fost cu prietenul meu X care sia cumparat etc si cu prietena lui Y la afi si blah blah"<<endl;
 	cout<<" Cu subprograme ar arata asa: Il sti pe prietenul meu X si pe prietena lui Y. Pai ieri am fost cu ei la film si X si-a cumparat blahblah"<<endl;
@@ -193,11 +205,13 @@ int subprograme()
 	cout<<"    int ce,iti,trebuie;;"<<endl;
 	cout<<"    citire();  //asa se apeleaza in main subprogramul de mai sus"<<endl;
 	cout<<"}"<<endl;
+	cout<<"Ready? Scrie 1 si apasa ENTER cand esti gata.";cin>>e;
 	if(btest==true)
 		return test2();
 }
 int vectori()
 {
+	int e;
 	cout<<" Bun...despre vectori...ei sunt un sir de mai multe numere."<<endl;
 	cout<<" O sa avem 3 lucruri de baza pe care trebuie sa le stim aici:"<<endl;
 	cout<<"      - Citire;"<<endl;
@@ -246,9 +260,11 @@ int vectori()
 	cout<<"    - Prima oara i=1 => se transmite in subprogram valoarea lui a[1], iar in subprogram se verifica daca a[1] (sub numele de X) este mai mare ca 2 si etc mai departe;"<<endl;
 	cout<<"    - Dupa i=2 => se transmite in subprogram valoarea lui a[2], iar in subprogram se verifica daca a[2] (sub acelasi nume de X) e mai mare ca 2 si etc-uri;"<<endl;
 	cout<<"    - Si tot asa pana la ultimul i."<<endl;
+	cout<<"Ready? Scrie 1 si apasa ENTER cand esti gata.";cin>>e;
 }
 int divizori()
 {
+	int e;
 	cout<<"A. Divizorii unui numar."<<endl;
 	cout<<"B. Numarul de divizori ai unui numar"<<endl;
 	cout<<"C. Numarul de divizori ai fiecarui numar dintr-un vector "<<endl;
@@ -294,9 +310,11 @@ int divizori()
 	cout<<"    for(i=1;i<=n;i++) //for-ul despre care vorbeam...despre care am mai vb la vectori...cel care apare inainte de fiecare operatie cu vector"<<endl;
 	cout<<"       divizori(a[i]); //se apeleaza subprogramul pentru vectorul a[i]"<<endl;
 	cout<<"}"<<endl;
+	cout<<"Ready? Scrie 1 si apasa ENTER cand esti gata.";cin>>e;
 }
 int ordonari()
 {
+	int e;
 	cout<<" Despre ordonari nu pot sa spun mare lucru...este un algoritm simplu ce trebuie urmat...contine 2 for-uri si o interschimbare:"<<endl;
 	cout<<"void ordonari()"<<endl;
 	cout<<"{"<<endl;
@@ -312,6 +330,7 @@ int ordonari()
 	cout<<"}"<<endl;
 	cout<<"Practic ordonarea inseamna compararea in modd repetat a numerelor dintr-un vector (in conditiile in care comparare = verificare + interschimbare)"<<endl;
 	cout<<"Cel mai simplu sa faceti ordonarea ar fi cu subprogram, deoarece nu mai sunt complicatii cu parametrul X din paranteza...IAR IN MAIN STITI CUM SE APELEAZA FUNCTIA...CU FOR"<<endl;
+	cout<<"Ready? Scrie 1 si apasa ENTER cand esti gata.";cin>>e;
 }
 int test3()
 {
@@ -339,28 +358,31 @@ int main()
 	int b;
 	if(btermsandconditions==false)
 		termsandconditions();
-	if(bintrebare == true)
+	if(bskip==false)
 	{
-		cout<<"----------------------------------------"<<endl;
-		cout<<" Vrei sa incarci si testele din program?"<<endl;
-		cout<<"----------------------------------------"<<endl;
-		cout<<"(1=DA/2=NU)";cin>>b;
-		if(b==2)
-			btest=false;
-		bintrebare = false;
+		if(bintrebare == true)
+		{
+			cout<<"----------------------------------------"<<endl;
+			cout<<" Vrei sa incarci si testele din program?"<<endl;
+			cout<<"----------------------------------------"<<endl;
+			cout<<"(1=DA/2=NU)";cin>>b;
+			if(b==2)
+				btest=false;
+			bintrebare = false;
+		}
+		if(bcopywright==false)
+		{
+			copywright();
+			bcopywright=true;
+		}
+		if(bmeniu==false)
+		{
+			meniu_lung();
+			bmeniu=true;
+		}
+		else
+			meniu_scurt();
 	}
-	if(bcopywright==false)
-	{
-		copywright();
-		bcopywright=true;
-	}
-	if(bmeniu==false)
-	{
-		meniu_lung();
-		bmeniu=true;
-	}
-	else
-		meniu_scurt();
 	if(optiune==1)
 		librarii();
 	else
