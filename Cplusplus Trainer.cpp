@@ -1,5 +1,5 @@
 
-//mai este de pus punctul 9 si testul 3.
+//mai este de pus testul 3.
 	
 // v 2.0
 // termenele si conditiile sa nu mai apara tot timpul cand pornesti programul, doar la prima pornire (save.acr)
@@ -14,7 +14,7 @@ bool btest=true, bcopywright=false, bmeniu=false, bintrebare = true, btermsandco
 int termsandconditions()
 {
 	int f;
-	cout<<" Cplusplus Trainer is a free software; you can redistribute it under the terms of the GNU General Public License as published by the Free Software Foundation; version 2 of the License. It may be updated by us from time to time without notice to you. "<<endl;
+	cout<<" Cplusplus Trainer is a free software; you can redistribute/modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 2 of the License. It may be updated by us from time to time without notice to you."<<endl;
 	cout<<" Cplusplus Trainer may be detected by some antivirus programs as infected, because it CAN MODIFY WITHOUT YOUR PERMISSION files from your computer; yet it CANNOT MODIFY files that could affect in any way the PERFORMANCE of your computer."<<endl;
 	cout<<" Cplusplus Trainer will use its capacity of reading/writing only in save.acr file!"<<endl;
 	cout<<" By continuing with the Cplusplus Trainer, you accept and agree to be bound by the terms and provision of the ToS."<<endl;
@@ -43,7 +43,7 @@ void copywright()
 void meniu_lung()
 {
 	cout<<"Hello and welcome to Cplusplus Trainer v0.9!"<<endl;
-	cout<<"Tot ce trebuie sa faci aici e sa alegi despre ce vrei sa inveti. Alege un numar de la 1 la 8 si apasa enter."<<endl;
+	cout<<"Tot ce trebuie sa faci aici e sa alegi despre ce vrei sa inveti. Alege un numar de la 1 la 9 si apasa enter."<<endl;
 	cout<<"1. Librarii"<<endl;
 	cout<<"2. Tipuri de subprograme"<<endl;
 	cout<<"3. Programe"<<endl;
@@ -55,11 +55,14 @@ void meniu_lung()
 	cout<<"9. De retinut!"<<endl;
 	cout<<"0. EXIT"<<endl;
 	cout<<"Make your choice: ";cin>>optiune;
+	cout<<"----------------------------------------------------"<<endl;
+	cout<<endl;
+	cout<<endl;
 }
 void meniu_scurt()
 {
 	cout<<"----------------------------------------------------"<<endl;
-	cout<<"Alege un numar de la 1 la 8 si apasa enter."<<endl;
+	cout<<"Alege un numar de la 1 la 9 si apasa enter."<<endl;
 	cout<<"1. Librarii"<<endl;
 	cout<<"2. Tipuri de subprograme"<<endl;
 	cout<<"3. Programe"<<endl;
@@ -72,6 +75,7 @@ void meniu_scurt()
 	cout<<"0. EXIT"<<endl;
 	cout<<"Alegeti optiunea: ";cin>>optiune;
 	cout<<"----------------------------------------------------"<<endl;
+	cout<<endl;
 }
 void librarii()
 {
@@ -153,14 +157,14 @@ int test2()
 {
 	int d;
 	cout<<"Test"<<endl<<endl;
-	cout<<"Alege raspunsurile corecte astfel incat programul de mai jos sa nu aiba nicio eroare"<<endl;
+	cout<<"Alege raspunsurile corecte astfel incat programul de mai jos sa nu aiba nicio eroare(din cauza vremurilor grele voi folosi ,, in loc de ghilimele)."<<endl;
 	cout<<"#include <a>"<<endl;
 	cout<<"b c()"<<endl;
 	cout<<"{"<<endl;
 	cout<<"    int i;"<<endl;
 	cout<<"    for(i=1;i<=n;i++)"<<endl;
 	cout<<"    {"<<endl;
-	//cout<<"        cout<<"a["<<i<<"]=";"<<endl; expected ; before a
+	cout<<"        cout<<,,a[,,<<i<<,,]=,,;"<<endl;
 	cout<<"        cin>>a[i];"<<endl;
 	cout<<"    }"<<endl;
 	cout<<"}"<<endl;
@@ -221,10 +225,10 @@ int vectori()
 	cout<<endl;
 	cout<<"CITIREA:"<<endl;
 	cout<<endl;
-	cout<<" Aici lucrurile trebuie pur si simplu tocite...citirea arata asa:"<<endl;
+	cout<<" Aici lucrurile trebuie pur si simplu tocite...citirea arata asa(din cauza vremurilor grele voi folosi ,, in loc de ghilimele):"<<endl;
 	cout<<"for(int i=1;i<=n;i++)   //evident ca aici i se poate declara si la inceputul programului, nu neaparat in for"<<endl;
 	cout<<"{"<<endl;
-//	cout<<"     cout<<"a["<<i<<"]=";"<<endl; expected ; before a
+	cout<<"     cout<<,,a[,,<<i<<,,]=,,;"<<endl;
 	cout<<"     cin>>a[i];"<<endl;
 	cout<<"}"<<endl;
 	cout<<endl;
@@ -233,7 +237,7 @@ int vectori()
 	cout<<endl;
 	cout<<" Din nou toceala:"<<endl;
 	cout<<"for(i=1;i<=n;i++)"<<endl;
-	cout<<"    cout<<a[i]<<" ";"<<endl;
+	cout<<"    cout<<a[i]<<,, ,,;"<<endl;
 	cout<<endl;
 	cout<<endl;
 	cout<<"FOLOSIREA IN SUBPROGRAME:"<<endl;
@@ -272,13 +276,13 @@ int divizori()
 	cout<<""<<endl;
 	cout<<"A. DIVIZORII UNUI NUMAR"<<endl;
 	cout<<" Pentru a ala divizorii unui numar vom avea nevoie de un for care reprezinta toate numerele de la 1 la n, unde n este chiar numarul nostru."<<endl;
-	cout<<" Ducandu-ne pe ideea asta (sub)programul va arata astfel:"<<endl;
+	cout<<" Ducandu-ne pe ideea asta (sub)programul va arata astfel(din cauza vremurilor grele voi folosi ,, in loc de ghilimele):"<<endl;
 	cout<<"int divizori(int x) //x este numarul nostru deja citit in main"<<endl;
 	cout<<"{"<<endl;
 	cout<<"    int i;"<<endl;
 	cout<<"    for(i=1;i<=n;i++) //for-ul despre care vorbeam"<<endl;
 	cout<<"       if(x%i==0) //verificam daca numarul nostru X se imparte la i"<<endl;
-	cout<<"          cout<<i<<" "; //afisam numarul care se divide cu X"<<endl;
+	cout<<"          cout<<i<<,, ,,; //afisam numarul care se divide cu X"<<endl;
 	cout<<"}"<<endl;
 	cout<<"Nu va mai explic si cum se face in main pentru ca deja stiti de a capitolul cu subprograme!"<<endl;
 	cout<<""<<endl;
@@ -301,7 +305,7 @@ int divizori()
 	cout<<"    for(i=1;i<=n;i++) //for-ul despre care vorbeam"<<endl;
 	cout<<"       if(x%i==0) //verificam daca numarul nostru X se imparte la i"<<endl;
 	cout<<"          k++; //K creste cu o unitate la fiecare divizor gasit"<<endl;
-	cout<<"    cout<<k<<" "; //se afiseaza numarul de divizori pe o singura linie, despartiti de "<<endl;
+	cout<<"    cout<<k<<,, ,,; //se afiseaza numarul de divizori pe o singura linie, despartiti de "<<endl;
 	cout<<"}"<<endl;
 	cout<<"int main()"<<endl;
 	cout<<"{"<<endl;
@@ -352,6 +356,25 @@ int nr_absolute()
 }
 void de_retinut()
 {
+	int g;
+	cout<<" Cateva lucruri pe care trebuie sa le sti(greseli frecvente):"<<endl;
+	cout<<"     - niciodata dupa declararea subprogramelor nu se pune ; ...de ex: void ordonare();  <--- NICIODATA!!!"<<endl;
+	cout<<"     - acoladele nu se pun anapoda...subprogramele trebuie sa arate cam asa:"<<endl;
+	cout<<"         int divizori()"<<endl;
+	cout<<"         {"<<endl;
+	cout<<"         }"<<endl;
+	cout<<"			In interiorul acoladelor scrieti ce e de scris!"<<endl;
+	cout<<"     - CITITI ERORILE DIN PARTEA JOS A ECRANULUI!!! De obicei ele va spun exact ce trebuie schimbat ca sa le reparati...de ex cea mai frecventa:"<<endl;
+	cout<<"			Expected ; before shit...inseamna ca trebuie sa cautati inainte de linia respectiva un loc unde ; TREBUIA PUSA, dar nu este"<<endl;
+	cout<<"     - nu spune asta stiu...se face asa...ca nu vei retine nimic :("<<endl;
+	cout<<endl;
+	cout<<endl;
+	cout<<" Game over! Daca vrei sa iesi din program apasa 1, daca vrei sa te intorci la meniu apasa oricare alta tasta si apasa enter.";cin>>g;
+	if(g==1)
+	{
+		bskip=true;
+		optiune=0;
+	}
 }
 int main()
 {
@@ -405,7 +428,7 @@ int main()
 								nr_absolute();
 							else
 								if(optiune==0)
-									return 0;
+									return 666;
 								else
 									if(optiune==5)
 										vectori();
@@ -413,6 +436,6 @@ int main()
 										if(optiune==9)
 											de_retinut();
 										else
-											cout<<"Optiune inexistenta. Introdu un numar de la 1 la 7."<<endl;
+											cout<<"Optiune inexistenta. Introdu un numar de la 1 la 9."<<endl;
 	return main();
 }
