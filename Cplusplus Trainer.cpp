@@ -14,15 +14,20 @@ bool btest=true, bcopywright=false, bmeniu=false, bintrebare = true, btermsandco
 int termsandconditions()
 {
 	int f;
+	cout<<"                                              ToC"<<endl<<endl;
 	cout<<" Cplusplus Trainer is a free software; you can redistribute/modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 2 of the License. It may be updated by us from time to time without notice to you."<<endl;
 	cout<<" Cplusplus Trainer may be detected by some antivirus programs as infected, because it CAN MODIFY WITHOUT YOUR PERMISSION files from your computer; yet it CANNOT MODIFY files that could affect in any way the PERFORMANCE of your computer."<<endl;
 	cout<<" Cplusplus Trainer will use its capacity of reading/writing only in save.acr file!"<<endl;
 	cout<<" By continuing with the Cplusplus Trainer, you accept and agree to be bound by the terms and provision of the ToS."<<endl;
-	cout<<" Do you agree?(1=YES/2=NO)";cin>>f;
+	cout<<endl;
+	cout<<endl;
+	cout<<" IT IS HIGHLY RECOMMENDED TO MAXIMAZE THIS PROGRAM TO SEE THE ENTIRE STORY!!!"<<endl;
+	cout<<" Do you agree with ToC?(1=YES/2=NO)";cin>>f;
 	btermsandconditions=true;
 	if(f==2)
 	{
-		cout<<"You didn't acceped the Terms and Conditions and the application will now exit!";
+		cout<<endl<<endl<<endl<<endl;
+		cout<<"You didn't accepted the ToC and the application will now exit!";
 		optiune=0;
 		bskip=true;
 	}
@@ -42,8 +47,8 @@ void copywright()
 }
 void meniu_lung()
 {
-	cout<<"Hello and welcome to Cplusplus Trainer v0.9!"<<endl;
-	cout<<"Tot ce trebuie sa faci aici e sa alegi despre ce vrei sa inveti. Alege un numar de la 1 la 9 si apasa enter."<<endl;
+	cout<<"Hello and welcome to Cplusplus Trainer v1.1!"<<endl;
+	cout<<"Tot ce trebuie sa faci aici e sa alegi despre ce vrei sa inveti. Alege un numar de la 1 la 12 si apasa enter."<<endl;
 	cout<<"1. Librarii"<<endl;
 	cout<<"2. Tipuri de subprograme"<<endl;
 	cout<<"3. Programe"<<endl;
@@ -52,7 +57,10 @@ void meniu_lung()
 	cout<<"6. Divizori"<<endl;
 	cout<<"7. Ordonari"<<endl;
 	cout<<"8. Numere absolute"<<endl;
-	cout<<"9. De retinut!"<<endl;
+	cout<<"9. Minim si maxim"<<endl;
+	cout<<"10. CMMDC"<<endl;
+	cout<<"11. Suma si medie aritmetica"<<endl;
+	cout<<"12. De retinut!"<<endl;
 	cout<<"0. EXIT"<<endl;
 	cout<<"Make your choice: ";cin>>optiune;
 	cout<<"----------------------------------------------------"<<endl;
@@ -62,7 +70,7 @@ void meniu_lung()
 void meniu_scurt()
 {
 	cout<<"----------------------------------------------------"<<endl;
-	cout<<"Alege un numar de la 1 la 9 si apasa enter."<<endl;
+	cout<<"Alege un numar de la 1 la 12 si apasa enter."<<endl;
 	cout<<"1. Librarii"<<endl;
 	cout<<"2. Tipuri de subprograme"<<endl;
 	cout<<"3. Programe"<<endl;
@@ -71,7 +79,10 @@ void meniu_scurt()
 	cout<<"6. Divizori"<<endl;
 	cout<<"7. Ordonari"<<endl;
 	cout<<"8. Numere absolute"<<endl;
-	cout<<"9. De retinut!"<<endl;
+	cout<<"9. Minim si maxim"<<endl;
+	cout<<"10. CMMDC"<<endl;
+	cout<<"11. Suma si medie aritmetica"<<endl;
+	cout<<"12. De retinut!"<<endl;
 	cout<<"0. EXIT"<<endl;
 	cout<<"Alegeti optiunea: ";cin>>optiune;
 	cout<<"----------------------------------------------------"<<endl;
@@ -354,6 +365,100 @@ int nr_absolute()
 	if(btest==true)
 		return test3();
 }
+int min_max()
+{
+	int f;
+	cout<<"A. MINIM"<<endl;
+	cout<<" Pentru a calcula minimul dintr-un vector avem nevoie de o variabila min pe care o vom declara in main ca fiind a[1] (primul element)."<<endl;
+	cout<<" Astea fiind spuse programul nostru va arata cam asa:"<<endl;
+	cout<<" #include<iostream.h>"<<endl;
+	cout<<" int a[10],n,min;"<<endl;
+	cout<<" void citire()"<<endl;
+	cout<<" {...} //sti deja ce e aici!"<<endl;
+	cout<<" int minim(int x) //incearca sa nu pui numele la subprogram tot min...pune si tu minim"<<endl;
+	cout<<" {"<<endl;
+	cout<<"    if(x<min)  //daca numarul nostru din vector e mai mic decat min"<<endl;
+	cout<<"       min=x;"<<endl;
+	cout<<" }"<<endl;
+	cout<<" int main()"<<endl;
+	cout<<" {"<<endl;
+	cout<<"    int i;"<<endl;
+	cout<<"    citire() //citirea vectorului"<<endl;
+	cout<<"    min=a[1]; //aici ii dam valoarea lui a[1]"<<endl;
+	cout<<"    for(i=1;i<=n;i++) //parcurgem vectorul"<<endl;
+	cout<<"       minim(a[i]); //folosim subprogramul minim pentru fiecare din nr din vector"<<endl;
+	cout<<"    cout<<min; //afisam min"<<endl;
+	cout<<" }"<<endl;
+	cout<<""<<endl;
+	cout<<""<<endl;
+	cout<<"B. MAXIM"<<endl;
+	cout<<" Pentru a calcula maximul folosim o variabila max pe care o definim de la inceput ca fiind -1"<<endl;
+	cout<<" Programul:"<<endl;
+	cout<<" #include<iostream.h>"<<endl;
+	cout<<" int a[10],n,max=-1;"<<endl;
+	cout<<" void citire()"<<endl;
+	cout<<" {...} //sti deja ce e aici!"<<endl;
+	cout<<" int maxim(int x) //incearca sa nu pui numele la subprogram tot max...pune si tu maxim"<<endl;
+	cout<<" {"<<endl;
+	cout<<"    if(x>max)  //daca numarul nostru din vector e mai mare decat max"<<endl;
+	cout<<"       max=x;"<<endl;
+	cout<<" }"<<endl;
+	cout<<" int main()"<<endl;
+	cout<<" {"<<endl;
+	cout<<"    int i;"<<endl;
+	cout<<"    citire() //citirea vectorului"<<endl;
+	cout<<"    for(i=1;i<=n;i++) //parcurgem vectorul"<<endl;
+	cout<<"       maxim(a[i]); //folosim subprogramul maxim pentru fiecare din nr din vector"<<endl;
+	cout<<"    cout<<max; //afisam max"<<endl;
+	cout<<endl;
+	cout<<endl;
+	cout<<" Daca ai nevoie si de minim si de maxim in acelasi program, trebuie sa ai grija sa indeplineasca ambele conditii, iar in for apelezi ambele subprograme intre {}"<<endl;
+	cout<<"Ready? Scrie 1 si apasa ENTER cand esti gata.";cin>>f;
+}
+int cmmdc()
+{
+	int g;
+	cout<<" Pentru CMMDC este o simpla ( :)) ) structura:"<<endl;
+	cout<<" int cmddc(int a,int b)"<<endl;
+	cout<<" {"<<endl;
+	cout<<"    while(a!=b)"<<endl;
+	cout<<"    {"<<endl;
+	cout<<"       if(a>b)"<<endl;
+	cout<<"          a=a-b;"<<endl;
+	cout<<"       else"<<endl;
+	cout<<"          b=b-a;"<<endl;
+	cout<<"     }"<<endl;
+	cout<<"     return a;"<<endl;
+	cout<<" }"<<endl;
+	cout<<""<<endl;
+	cout<<" INVATA ASTA SI O SA FIE UN PIC MAI BINE!...pt toti :D"<<endl;
+	cout<<" In main chestia asta o sa se apeleze cv de genul cmddc(nr1,nr2), unde nr1 si nr2 sunt numerele intre care trebuie sa se faca cmmdc."<<endl;
+	cout<<"Ready? Scrie 1 si apasa ENTER cand esti gata.";cin>>g;
+}
+int suma_medie()
+{
+	int h;
+	cout<<"A. SUMA"<<endl;
+	cout<<" Suma se face prin probabil cea mai simpla forma..."<<endl;
+	cout<<" int suma(int x) //unde x este este pe rand fiecare nr din vector"<<endl;
+	cout<<" {"<<endl;
+	cout<<"    int s=0; //suma noastra"<<endl;
+	cout<<"    s=s+x;"<<endl;
+	cout<<"    return s;"<<endl;
+	cout<<" }"<<endl;
+	cout<<""<<endl;
+	cout<<"B. MEDIA"<<endl;
+	cout<<" Nici nu vreau sa mai discut aici...:(("<<endl;
+	cout<<" int medie(int x,int y) //unde x si y sunt numerele  carora le facem media"<<endl;
+	cout<<" {"<<endl;
+	cout<<"    int m=0; //media noastra"<<endl;
+	cout<<"    m=(x+y)/2;"<<endl;
+	cout<<"    return m;"<<endl;
+	cout<<" }"<<endl;
+	cout<<""<<endl;
+	cout<<" Sa nu te aud ca nu sti cum se apeleaza in main chstia asta...si aia de la suma..."<<endl;
+	cout<<"Ready? Scrie 1 si apasa ENTER cand esti gata.";cin>>h;
+}
 void de_retinut()
 {
 	int g;
@@ -428,14 +533,27 @@ int main()
 								nr_absolute();
 							else
 								if(optiune==0)
+								{
+									cout<<endl<<endl<<endl<<endl;
+									cout<<"Don't forget to thank me :D"<<endl;
 									return 666;
+								}
 								else
 									if(optiune==5)
 										vectori();
 									else
-										if(optiune==9)
+										if(optiune==12)
 											de_retinut();
 										else
-											cout<<"Optiune inexistenta. Introdu un numar de la 1 la 9."<<endl;
+											if(optiune==9)
+												min_max();
+											else
+												if(optiune==10)
+													cmmdc();
+												else
+													if(optiune==11)
+														suma_medie();
+													else
+														cout<<"Optiune inexistenta. Introdu un numar de la 1 la 9."<<endl;
 	return main();
 }
