@@ -1,10 +1,10 @@
 //     UPCOMMING SHITS:
-//mai este de pus testul 3.
 	
 // v 2.0
 // termenele si conditiile sa nu mai apara tot timpul cand pornesti programul, doar la prima pornire (save.acr)
 // sistemul de teste sa aiba salvat prin intermediul unui fisier "test.acr" modul in care testele vor fi afisate.
-// cel mia probabil  sa existe optiune de toate, doar cele ramase, custom, niciunul.
+// cel mai probabil  sa existe optiune de toate, doar cele ramase, custom, niciunul.
+
 #include<iostream.h>
 #include<string.h>
 #include<windows.h>
@@ -47,7 +47,7 @@ void copywright()
 }
 void meniu_lung()
 {
-	cout<<"Hello and welcome to Cplusplus Trainer v1.1!"<<endl;
+	cout<<"Hello and welcome to Cplusplus Trainer v1.2!"<<endl;
 	cout<<"Tot ce trebuie sa faci aici e sa alegi despre ce vrei sa inveti. Alege un numar de la 1 la 12 si apasa enter."<<endl;
 	cout<<"1. Librarii"<<endl;
 	cout<<"2. Tipuri de subprograme"<<endl;
@@ -58,7 +58,7 @@ void meniu_lung()
 	cout<<"7. Ordonari"<<endl;
 	cout<<"8. Numere absolute"<<endl;
 	cout<<"9. Minim si maxim"<<endl;
-	cout<<"10. CMMDC"<<endl;
+	cout<<"10. C.M.M.D.C"<<endl;
 	cout<<"11. Suma si medie aritmetica"<<endl;
 	cout<<"12. De retinut!"<<endl;
 	cout<<"0. EXIT"<<endl;
@@ -80,11 +80,11 @@ void meniu_scurt()
 	cout<<"7. Ordonari"<<endl;
 	cout<<"8. Numere absolute"<<endl;
 	cout<<"9. Minim si maxim"<<endl;
-	cout<<"10. CMMDC"<<endl;
+	cout<<"10. C.M.M.D.C"<<endl;
 	cout<<"11. Suma si medie aritmetica"<<endl;
 	cout<<"12. De retinut!"<<endl;
 	cout<<"0. EXIT"<<endl;
-	cout<<"Alegeti optiunea: ";cin>>optiune;
+	cout<<"Alege optiunea: ";cin>>optiune;
 	cout<<"----------------------------------------------------"<<endl;
 	cout<<endl;
 }
@@ -100,7 +100,7 @@ void librarii()
 	cout<<"- <math.h>;"<<endl;
 	cout<<"- <fstream.h>;"<<endl;
 	cout<<endl;
-	cout<<"Libraria <iostream.h> este folosita daca in program exista comenzile de baza, gen void,int,cout sau cin. SI DA EXISTA OBLIGATORIU IN ORICE PROGRAM. Acelasi lucru face si <fstream.h> doar asta ultima se foloseste de fisiere."<<endl<<endl;
+	cout<<"Libraria <iostream.h> este folosita daca in program exista comenzile de baza, gen void,int,cout sau cin. SI DA, EXISTA OBLIGATORIU IN ORICE PROGRAM. Acelasi lucru face si <fstream.h> doar asta ultima se foloseste de fisiere."<<endl<<endl;
 	cout<<"Libraria <math.h> este folosita daca in program exista comenzi de genul sqrt sau pow."<<endl;
 	cout<<endl;
 	cout<<"Ele se apeleaza in program prin sintaxa #include <librarie>, de exemplu: #include <iostream.h> sau #include <math.h>"<<endl;
@@ -119,7 +119,7 @@ int test1()
 	cout<<"    b=c+a;"<<endl;
 	cout<<"}"<<endl;
 	cout<<endl;
-	cout<<"Scrieti cifra corespunzatoare raspunsului corect."<<endl;
+	cout<<"Scrie cifra corespunzatoare raspunsului corect."<<endl;
 	cout<<"1. a= conio.h  |  b= int"<<endl;
 	cout<<"2. a= fstream.h  |  b= void"<<endl;
 	cout<<"3. a= iostream.h  |  b= int"<<endl;
@@ -140,8 +140,8 @@ int tipuri_subprograme()
 	cout<<"Tipurile Subprogramelor"<<endl<<endl;
 	cout<<"Orice program este format din subprograme, fie si el doar unul (main). O sa termin repede cu ele...astea sunt de mai multe tipuri:"<<endl<<endl;
 	cout<<"1. VOID - un subprogram foloseste void daca in interiorul lui se folosesc numai operatii de citire/scriere (de tipul cin,cout, a=b);"<<endl;
-	cout<<"2. INT - se foloseste int daca in subprogram se folosesc si operatii matematice (de tipul a=a-b, b=c/2, a=sqrt(a*b) ) si se returneaza un numar INTreg;"<<endl;
-	cout<<"3. FLOAT - la fel ca la int, doar ca float returneaza un numar REAL"<<endl;
+	cout<<"2. INT - se foloseste int daca in subprogram se folosesc si operatii matematice (de tipul a=a-b, b=c/2, a=sqrt(a*b) ) si se returneaza un numar INTREG;"<<endl;
+	cout<<"3. FLOAT - la fel ca la int, doar ca returneaza un numar REAL"<<endl;
 	cout<<endl;
 	if(btest==true)
 	{
@@ -186,7 +186,7 @@ int test2()
 	cout<<"    cout<<a[1];"<<endl;
 	cout<<"}"<<endl;
 	cout<<endl;
-	cout<<"Scrieti cifra corespunzatoare raspunsului corect."<<endl;
+	cout<<"Scrie cifra corespunzatoare raspunsului corect."<<endl;
 	cout<<"1. a= conio.h  |  b= int  |  c= citire  |  d= int  |  e= scriere"<<endl;
 	cout<<"2. a= fstream.h  |  b= void  | c= scriere  |  d= void  |  e= float"<<endl;
 	cout<<"3. a= iostream.h  |  b= void  |  c= citire  |  d= int  |  e= main"<<endl;
@@ -205,7 +205,7 @@ int subprograme()
 {
 	int e;
 	cout<<" Subprogramele sunt niste chestii...care...hm...pai imagineaza-ti ca spui o pveste...si in loc sa insiri povestea cap coada, prezinti mai intai personajele si dupa povestesti."<<endl;
-	cout<<" De exemplu: Ieri am fost cu prietenul meu X care sia cumparat etc si cu prietena lui Y la afi si blah blah"<<endl;
+	cout<<" De exemplu: Ieri am fost cu prietenul meu X care si-a cumparat etc si cu prietena lui Y la afi si blah blah"<<endl;
 	cout<<" Cu subprograme ar arata asa: Il sti pe prietenul meu X si pe prietena lui Y. Pai ieri am fost cu ei la film si X si-a cumparat blahblah"<<endl;
 	cout<<" Cam asa e si cu subprogramele...faci operatiile intr-un alt subprogram deasupra main-ului. Tot ce trebui sa retii din asta e ca subprogramele se pun INAINTEA main-ului si se apeleaza in main prin numele lor."<<endl;
 	cout<<"De exemplu:"<<endl;
@@ -228,7 +228,7 @@ int vectori()
 {
 	int e;
 	cout<<" Bun...despre vectori...ei sunt un sir de mai multe numere."<<endl;
-	cout<<" O sa avem 3 lucruri de baza pe care trebuie sa le stim aici:"<<endl;
+	cout<<" O sa ai 3 lucruri de baza pe care trebuie sa le sti aici:"<<endl;
 	cout<<"      - Citire;"<<endl;
 	cout<<"      - Folosire in subprograme;"<<endl;
 	cout<<"      - Afisare"<<endl;
@@ -254,7 +254,7 @@ int vectori()
 	cout<<"FOLOSIREA IN SUBPROGRAME:"<<endl;
 	cout<<endl;
 	cout<<" Bun aici o sa vorbesc un pic despre trasmiterea unui vector in subprograme."<<endl;
-	cout<<" Mai sus ati vazut cum se apeleaza un subprogram in main: citire();...valorile unui numar/vector sunt transmise in subprogram in interiorul parantezelor ()...de exemplu:"<<endl;
+	cout<<" Mai sus ai vazut cum se apeleaza un subprogram in main: citire();...valorile unui numar/vector sunt transmise in subprogram in interiorul parantezelor ()...de exemplu:"<<endl;
 	cout<<" Avem un vector a[i], deja citit, ale calui valori vrem sa le trasmitem in subrogramul vector, pentru a face operatii cu el. Programul ar arata astfel."<<endl;
 	cout<<"int vector(int x) //aici x reprezinta fiecare valoare a vectorul a[i]...transmis din main in subprogram ca fiind X"<<endl;
 	cout<<"{"<<endl;
@@ -286,7 +286,7 @@ int divizori()
 	cout<<""<<endl;
 	cout<<""<<endl;
 	cout<<"A. DIVIZORII UNUI NUMAR"<<endl;
-	cout<<" Pentru a ala divizorii unui numar vom avea nevoie de un for care reprezinta toate numerele de la 1 la n, unde n este chiar numarul nostru."<<endl;
+	cout<<" Pentru a afla divizorii unui numar vom avea nevoie de un for care reprezinta toate numerele de la 1 la n, unde n este chiar numarul nostru."<<endl;
 	cout<<" Ducandu-ne pe ideea asta (sub)programul va arata astfel(din cauza vremurilor grele voi folosi ,, in loc de ghilimele):"<<endl;
 	cout<<"int divizori(int x) //x este numarul nostru deja citit in main"<<endl;
 	cout<<"{"<<endl;
@@ -343,12 +343,64 @@ int ordonari()
 	cout<<"             a[j]=aux;"<<endl;
 	cout<<"          }"<<endl;
 	cout<<"}"<<endl;
-	cout<<"Practic ordonarea inseamna compararea in modd repetat a numerelor dintr-un vector (in conditiile in care comparare = verificare + interschimbare)"<<endl;
-	cout<<"Cel mai simplu sa faceti ordonarea ar fi cu subprogram, deoarece nu mai sunt complicatii cu parametrul X din paranteza...IAR IN MAIN STITI CUM SE APELEAZA FUNCTIA...CU FOR"<<endl;
+	cout<<"Practic ordonarea inseamna compararea in mod repetat a numerelor dintr-un vector (in conditiile in care comparare = verificare + interschimbare)"<<endl;
+	cout<<"Cel mai simplu sa faci ordonarea ar fi cu subprogram, deoarece nu mai sunt complicatii cu parametrul X din paranteza...IAR IN MAIN STI CUM SE APELEAZA FUNCTIA...CU FOR"<<endl;
 	cout<<"Ready? Scrie 1 si apasa ENTER cand esti gata.";cin>>e;
 }
 int test3()
 {
+	int a,b,c,d,e,f,g,h,i,j;
+	cout<<""<<endl;
+	cout<<" La toate intrebarile de mai jos trebuie sa raspunzi cu 1, daca este adevarat, sau cu 2, daca este fals:"<<endl;
+	cout<<"1. Pentru a afla valoarea absoluta a unui element din vector trebuie sa faci un subprogram care verifica daca numarul este mai mare ca 0, iar daca este face operatia x=-x.";cin>>a;
+	cout<<endl;
+	if(a==1)
+		cout<<"GRESIIIIIIT! >_< Uita-te pe nr absolute..."<<endl;
+	else
+		cout<<"GJ!"<<endl;
+	cout<<"2. Aflarea numerelor absolute este imposibila pentru elemente care nu apartin unui vector.";cin>>b;
+	cout<<endl;
+	if(b==1)
+		cout<<"GRESIIIIIIT! >_< Uita-te pe nr absolute..."<<endl;
+	else
+		cout<<"GJ!"<<endl;
+	cout<<"3. Pentru a ordona un vector este nevoie de un singur for urmat de o interschimbare.";cin>>c;
+	cout<<endl;
+	if(c==1)
+		cout<<"GRESIIIIIIT! >_< Uita-te pe ordonari..."<<endl;
+	else
+		cout<<"GJ!"<<endl;
+	cout<<"4. Interschimbarea presupune 3 operatii.";cin>>d;
+	cout<<endl;
+	if(d==2)
+		cout<<"GRESIIIIIIT! >_< Uita-te pe ordonari..."<<endl;
+	else
+		cout<<"GJ!"<<endl;
+	cout<<"5. Ordonarea se poate face si in main.";cin>>e;
+	cout<<endl;
+	if(e==2)
+		cout<<"GRESIIIIIIT! >_< Uita-te pe ordonari..."<<endl;
+	else
+		cout<<"GJ!"<<endl;
+	cout<<"6. Ca sa verifici numarul de divizori ai nevoie de 2 contoare: unul K care sa masoare numarul de numere si unul P care sa masoare numarul de divizori";cin>>i;
+	cout<<endl;
+	if(i==1)
+		cout<<"GRESIIIIIIT! >_< Uita-te pe divizori..."<<endl;
+	else
+		cout<<"GJ!"<<endl;
+	cout<<"7. Minimul si maximul pot fi aflate folosind un singur for in main.";cin>>f;
+	cout<<endl;
+	if(f==2)
+		cout<<"GRESIIIIIIT! >_< Uita-te pe minime si maxime..."<<endl;
+	else
+		cout<<"GJ!"<<endl;
+	cout<<"8. Subprogramul de CMMDC se apeleaza in main in forma cmmdc(a[i])";cin>>g;
+	cout<<endl;
+	if(g==1)
+		cout<<"GRESIIIIIIT! >_< Uita-te pe minime si maxime..."<<endl;
+	else
+		cout<<"GJ!"<<endl;
+	cout<<"Testul este gata! Apasa orice tasta cand esti gata (si enter)";cin>>g;
 }
 int nr_absolute()
 {
@@ -362,8 +414,7 @@ int nr_absolute()
 	cout<<"Metoda este valabila si pentru numerele dintr-un vector!"<<endl;
 	cout<<""<<endl;
 	cout<<"Ready? Scrie 1 si apasa ENTER cand esti gata.";cin>>e;
-	if(btest==true)
-		return test3();
+	
 }
 int min_max()
 {
@@ -458,6 +509,8 @@ int suma_medie()
 	cout<<""<<endl;
 	cout<<" Sa nu te aud ca nu sti cum se apeleaza in main chstia asta...si aia de la suma..."<<endl;
 	cout<<"Ready? Scrie 1 si apasa ENTER cand esti gata.";cin>>h;
+	if(btest==true)
+		return test3();
 }
 void de_retinut()
 {
