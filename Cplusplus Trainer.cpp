@@ -1,4 +1,4 @@
-
+//     UPCOMMING SHITS:
 //mai este de pus testul 3.
 	
 // v 2.0
@@ -554,6 +554,6 @@ int main()
 													if(optiune==11)
 														suma_medie();
 													else
-														cout<<"Optiune inexistenta. Introdu un numar de la 1 la 9."<<endl;
+														cout<<"Optiune inexistenta. Introdu un numar de la 1 la 12."<<endl;
 	return main();
 }
