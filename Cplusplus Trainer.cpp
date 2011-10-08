@@ -27,7 +27,7 @@ int termsandconditions()
 	if(f==2)
 	{
 		cout<<endl<<endl<<endl<<endl;
-		cout<<"You didn't accepted the ToC and the application will now exit!";
+		cout<<"You didn't accept the ToC and the application will now exit!";
 		optiune=0;
 		bskip=true;
 	}
