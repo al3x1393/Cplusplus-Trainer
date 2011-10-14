@@ -6,7 +6,7 @@
 // cel mai probabil  sa existe optiune de toate, doar cele ramase, custom, niciunul.
 
 #include<iostream.h>
-#include<string.h>
+#include<stdio.h>
 #include<windows.h>
 int optiune;
 bool btest=true, bcopywright=false, bmeniu=false, bintrebare = true, btermsandconditions=false, bskip=false;
@@ -537,6 +537,7 @@ void de_retinut()
 int main()
 {
 	int b;
+	system("start https://github.com/al3x1393/Cplusplus-Trainer/downloads");
 	if(btermsandconditions==false)
 		termsandconditions();
 	if(bskip==false)
